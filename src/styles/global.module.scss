@@ -1,0 +1,30 @@
+$green: #13aa57;
+$grey: #bdbdbd;
+$blue: #1f3f68;
+$dark_grey: #212121;
+$box_shadow_green: rgba(19, 170, 87, 0.3);
+$box_shadow_black: rgba(0, 0, 0, 0.107654);
+$custom_black: #263238;
+
+// media queries
+$break-mobile: 320px;
+$break-tablet: 768px;
+$break-mobile-rotated: 824px;
+$break-desktop: 1366px;
+
+// media query mixins
+@mixin respond-to($media) {
+	@if $media == mobile {
+		@media only screen and (min-width: $break-mobile) and (max-width: ($break-tablet - 1)) {
+			@content;
+		}
+	} @else if $media == tablet {
+		@media only screen and (min-width: $break-tablet) and (max-width: $break-desktop) {
+			@content;
+		}
+	} @else if $media == desktop {
+		@media only screen and (min-width: ($break-desktop + 1)) {
+			@content;
+		}
+	}
+}

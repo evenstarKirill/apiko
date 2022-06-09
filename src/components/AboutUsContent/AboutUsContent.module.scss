@@ -1,0 +1,54 @@
+@import "./../../styles//global.module.scss";
+
+.wrapper {
+	position: absolute;
+	margin-right: 100px;
+	left: 526px;
+	top: 960px;
+	background: #ffffff;
+	box-shadow: -1px 12px 23px $box_shadow_black;
+	padding: 64px 40px 64px 70px;
+
+	@include respond-to(tablet) {
+		margin-right: 30px;
+		padding: 64px 20px 64px 50px;
+	}
+	.wedding {
+		color: $green;
+		text-shadow: 0px 4px 4px $box_shadow_black;
+	}
+
+	.title {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 40px;
+		line-height: 54px;
+		text-transform: uppercase;
+	}
+
+	p {
+		padding: 25px 10px 10px 25px;
+		font-weight: 200;
+		font-size: 18px;
+		line-height: 29px;
+		border-left: 2px solid black;
+
+		@include respond-to(tablet) {
+			padding: 14px 10px 10px 14px;
+		}
+	}
+
+	.button {
+		width: 155px;
+		height: 43px;
+		text-align: center;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 21px;
+		text-align: center;
+		color: $green;
+		background-color: #ffffff;
+		border: 1px $green solid;
+		box-shadow: none;
+	}
+}

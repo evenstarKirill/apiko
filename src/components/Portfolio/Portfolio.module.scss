@@ -1,0 +1,73 @@
+@import "./../../styles/global.module.scss";
+
+$gap: 10px;
+
+.wrapper {
+	width: 100%;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.tittle {
+		font-weight: 200;
+		font-size: 39.9592px;
+		line-height: 54px;
+		text-transform: uppercase;
+	}
+
+	.container {
+		object-fit: cover;
+		margin-bottom: 40px;
+		width: 84%;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: $gap;
+		box-sizing: border-box;
+
+		@include respond-to(tablet) {
+			width: 95%;
+		}
+
+		.item {
+			width: 100%;
+			max-width: 500px;
+			max-height: 500px + $gap;
+		}
+
+		.item:nth-child(odd) {
+			grid-row: span 2;
+			height: 500px + $gap;
+		}
+		.item:nth-child(even) {
+			grid-row: span 1;
+			height: 250px;
+		}
+		.item:nth-child(3n) {
+			grid-row: span 1;
+			height: 250px;
+		}
+	}
+
+	.button {
+		font-weight: 400;
+		font-size: 14.9847px;
+		line-height: 21px;
+		color: #000000;
+		background-color: white;
+		border: 1px solid black;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 154.84px;
+		height: 42.96px;
+		padding: 12px;
+		cursor: pointer;
+		box-shadow: none;
+
+		@include respond-to(tablet) {
+			width: 174.84px;
+			height: 62.96px;
+		}
+	}
+}

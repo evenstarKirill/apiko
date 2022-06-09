@@ -1,0 +1,60 @@
+@import "./../../../styles//global.module.scss";
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	max-height: 200px;
+	margin-bottom: 20px;
+
+	.title_wrapper {
+		min-width: 200px;
+		max-width: 350px;
+		width: 100%;
+		height: 167px;
+		display: flex;
+		flex-direction: column;
+
+		.title_icon {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+			.title {
+				font-size: 22px;
+				line-height: 26px;
+				margin-left: 14px;
+				padding: 0;
+				display: flex;
+
+				@include respond-to(tablet) {
+					font-size: 18px;
+				}
+			}
+		}
+
+		.line_body {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			max-height: 100px;
+
+			.line {
+				margin-left: 16px;
+				width: 2px;
+				height: 100%;
+				background-color: black;
+			}
+
+			p {
+				width: 100%;
+				max-width: 400px;
+				min-width: 150px;
+				margin-left: 20px;
+				font-weight: 200;
+				font-size: 16px;
+				line-height: 26px;
+			}
+		}
+	}
+}

@@ -1,0 +1,77 @@
+@import "./../../../styles//global.module.scss";
+
+.wrapper {
+	padding: 46px 66px 48px 56px;
+	background: #ffffff;
+	box-shadow: -1px 12px 23px $box_shadow_black;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	max-width: 540px;
+	width: 100%;
+
+	@include respond-to(tablet) {
+		max-width: 480px;
+	}
+
+	.title {
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 30px;
+		letter-spacing: 0.04em;
+		color: #000000;
+		margin-bottom: 50px;
+	}
+
+	form {
+		width: 100%;
+
+		.input_block {
+			width: 100%;
+
+			label {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 30px;
+				letter-spacing: 0.04em;
+				color: #000000;
+				opacity: 0.8;
+				margin: 0;
+			}
+
+			input {
+				width: 100%;
+				padding-left: 20px;
+				height: 72px;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 30px;
+				letter-spacing: 0.04em;
+				color: $blue;
+				opacity: 0.3;
+				margin-top: 22px;
+				margin-bottom: 8px;
+			}
+
+			textarea {
+				@extend input;
+				height: auto;
+				resize: none;
+				margin-bottom: 8px;
+			}
+
+			p {
+				color: red;
+				margin: 0;
+				padding: 0;
+				margin-bottom: 8px;
+				display: flex;
+				justify-content: flex-end;
+			}
+		}
+	}
+
+	.button {
+		width: calc(100% + 26px);
+	}
+}

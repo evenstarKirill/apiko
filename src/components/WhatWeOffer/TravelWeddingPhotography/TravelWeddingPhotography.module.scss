@@ -1,0 +1,61 @@
+@import "./../../../styles//global.module.scss";
+
+.wrapper {
+	z-index: 20;
+	margin: 30px 0 20px -21px;
+	width: 800px;
+	background-color: white;
+	box-shadow: -1px 12px 23px $box_shadow_black;
+	display: flex;
+	flex-direction: column;
+
+	@include respond-to(tablet) {
+		width: 700px;
+	}
+
+	.content_wrapper {
+		padding: 10px 20px 10px 20px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		.left_border {
+			height: 100%;
+			justify-content: center;
+			display: flex;
+			flex-direction: column;
+
+			.line {
+				margin-left: 18px;
+				width: 2px;
+				height: 65px;
+				background-color: black;
+			}
+
+			.face {
+				margin-top: 10px;
+				margin-bottom: 10px;
+				width: 40px;
+				height: 40px;
+			}
+		}
+
+		.content {
+			padding-right: 50px;
+			margin-left: 20px;
+			font-weight: 200;
+			font-size: 16px;
+			line-height: 26px;
+
+			.body {
+				width: 100%;
+				white-space: break-spaces;
+			}
+		}
+	}
+	.green_line {
+		background-color: $green;
+		width: 100%;
+		height: 4px;
+	}
+}

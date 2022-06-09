@@ -1,0 +1,44 @@
+@import "./../../styles/global.module.scss";
+
+.list {
+	margin-left: 41px;
+	display: grid;
+	grid-auto-flow: column;
+	gap: 30px;
+
+	@include respond-to(tablet) {
+		gap: 20px;
+		margin-left: 21px;
+	}
+
+	.item_ellipse {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.item {
+			white-space: nowrap;
+			cursor: pointer;
+		}
+
+		.item:last-child {
+			margin: 0;
+		}
+
+		.item:hover {
+			transform: scale(1.1);
+			opacity: 0.25;
+			transition: transform 0.3s;
+		}
+
+		.ellipse {
+			display: none;
+		}
+	}
+}
+
+.list_white {
+	@extend .list;
+	color: white;
+	opacity: 0.4;
+}
