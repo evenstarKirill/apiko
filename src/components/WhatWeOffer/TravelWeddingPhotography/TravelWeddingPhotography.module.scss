@@ -13,6 +13,11 @@
 		width: 700px;
 	}
 
+	@include respond-to(mobile) {
+		margin: 0;
+		width: 100%;
+	}
+
 	.content_wrapper {
 		padding: 10px 20px 10px 20px;
 		display: flex;

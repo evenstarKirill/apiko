@@ -9,6 +9,11 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 2px 10px 2px 10px;
+
+	@include respond-to(mobile) {
+		width: 100%;
+		font-size: 30px;
+	}
 }
 
 .arrow {
@@ -31,4 +36,8 @@
 .full {
 	@extend .arrow;
 	border: none;
+
+	@include respond-to(mobile) {
+		display: none;
+	}
 }

@@ -6,6 +6,10 @@
 	flex-direction: column;
 	align-items: center;
 
+	@include respond-to(mobile) {
+		height: 1000px;
+	}
+
 	.content {
 		display: flex;
 		flex-direction: column;

@@ -12,11 +12,23 @@
 		@include respond-to(tablet) {
 			margin-left: 47%;
 		}
+
+		@include respond-to(mobile) {
+			position: static;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			width: 100%;
+		}
 	}
 }
 
 .wrapper {
 	background-color: white;
+
+	@include respond-to(mobile) {
+		height: 1000px;
+	}
 
 	.please_contact_us {
 		margin-top: 300px;
@@ -25,6 +37,11 @@
 		height: 371px;
 
 		@include respond-to(tablet) {
+			margin-left: 30px;
+			max-width: 487px;
+		}
+
+		@include respond-to(mobile) {
 			margin-left: 30px;
 			max-width: 487px;
 		}
@@ -84,5 +101,11 @@
 		height: 936px;
 		float: right;
 		top: -694px;
+
+		@include respond-to(mobile) {
+			position: static;
+			width: 70%;
+			margin-top: -50px;
+		}
 	}
 }

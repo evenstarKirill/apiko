@@ -20,6 +20,10 @@
 
 	.portfolio {
 		grid-column: span 2;
+
+		@include respond-to(mobile) {
+			grid-column: auto;
+		}
 	}
 
 	.testimonials {
@@ -33,6 +37,10 @@
 
 	.subscribe {
 		@extend .portfolio;
+
+		@include respond-to(mobile) {
+			margin-top: 1000px;
+		}
 	}
 
 	.footer {

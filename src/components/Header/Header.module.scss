@@ -6,4 +6,12 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+
+	@include respond-to(mobile) {
+		height: 100px;
+	}
+
+	@include respond-to(mobile) {
+		margin: 22px 0 150px 0;
+	}
 }

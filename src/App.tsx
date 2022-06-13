@@ -20,8 +20,13 @@ function App() {
 	return (
 		<RecoilRoot>
 			<div className={styles.app}>
-				<HeaderContent scrollTo={executeScroll} />
-				<HeaderImage />
+				<div className={styles.header_content}>
+					<HeaderContent scrollTo={executeScroll} />
+				</div>
+
+				<div className={styles.header_image}>
+					<HeaderImage />
+				</div>
 				<img
 					style={{ height: "800px" }}
 					className={styles.image}

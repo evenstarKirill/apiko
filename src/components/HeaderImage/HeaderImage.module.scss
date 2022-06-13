@@ -1,8 +1,14 @@
+@import "./../../styles//global.module.scss";
+
 .wrapper {
 	position: relative;
 	height: 900px;
 	display: flex;
 	flex-direction: column;
+
+	@include respond-to(mobile) {
+		height: 100%;
+	}
 }
 
 .item_fullscreen {
@@ -24,4 +30,8 @@
 	left: 0px;
 	bottom: 0px;
 	z-index: 1000;
+
+	@include respond-to(mobile) {
+		// display: none;
+	}
 }

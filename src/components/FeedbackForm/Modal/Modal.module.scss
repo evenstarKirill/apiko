@@ -14,6 +14,11 @@
 		max-width: 480px;
 	}
 
+	@include respond-to(mobile) {
+		max-width: 100%;
+		margin: 20px;
+	}
+
 	.title {
 		font-weight: 400;
 		font-size: 20px;
