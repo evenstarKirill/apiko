@@ -4,7 +4,12 @@ import Button from "../Button/Button";
 
 import styles from "./Subscribe.module.scss";
 
-function Subscribe() {
+interface IProps {
+	id?: string;
+	className?: string;
+}
+
+function Subscribe({ id, className }: IProps) {
 	const [email, setEmail] = useState(" ");
 	const [emailDirty, setEmailDirty] = useState(false);
 	const [emailError, setEmailError] = useState("Email can't be empty");
@@ -35,33 +40,35 @@ function Subscribe() {
 	}, [emailError]);
 
 	return (
-		<div className={styles.wrapper} id='subscribe'>
-			<div className={styles.modal_wrapper}>
-				<h3>Subscribe for updates</h3>
-				<form>
-					<div className={styles.input_button}>
-						<input
-							onChange={(e) => onInputHandler(e)}
-							value={email}
-							onBlur={(e) => onBlurHandler(e)}
-							name='email'
-							placeholder='Your Email'
-						/>
+		<div id={id} className={className}>
+			<div className={styles.wrapper} id='subscribe'>
+				<div className={styles.modal_wrapper}>
+					<h3>Subscribe for updates</h3>
+					<form>
+						<div className={styles.input_button}>
+							<input
+								onChange={(e) => onInputHandler(e)}
+								value={email}
+								onBlur={(e) => onBlurHandler(e)}
+								name='email'
+								placeholder='Your Email'
+							/>
 
-						<Button
-							isDisabled={!formValid}
-							propStyles={styles.button}>
-							Subscribe
-						</Button>
-					</div>
-					{emailError && emailDirty && (
-						<p className={styles.error}>{emailError}</p>
-					)}
-					<p>
-						We value your privacy. None of the details supplied will
-						be shared with external parties
-					</p>
-				</form>
+							<Button
+								isDisabled={!formValid}
+								propStyles={styles.button}>
+								Subscribe
+							</Button>
+						</div>
+						{emailError && emailDirty && (
+							<p className={styles.error}>{emailError}</p>
+						)}
+						<p>
+							We value your privacy. None of the details supplied
+							will be shared with external parties
+						</p>
+					</form>
+				</div>
 			</div>
 		</div>
 	);

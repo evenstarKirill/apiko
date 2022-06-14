@@ -10,12 +10,12 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 import styles from "./HeaderImage.module.scss";
 
-function HeaderImage() {
-	const [data] = useRecoilState<IData>(weddingState);
+interface IStateTypes {
+	showModal: boolean;
+}
 
-	interface IStateTypes {
-		showModal: boolean;
-	}
+function HeaderImage(className: any) {
+	const [data] = useRecoilState<IData>(weddingState);
 
 	const [modalState, setModalState] = useState<IStateTypes>({
 		showModal: false,
@@ -23,10 +23,6 @@ function HeaderImage() {
 
 	const [page, setPage] = useState(1);
 	const [onLoad, setOnLoad] = useState(false);
-	console.log(
-		"🚀 ~ file: HeaderImage.tsx ~ line 26 ~ HeaderImage ~ onLoad",
-		onLoad
-	);
 
 	const handleToggleModal = () => {
 		const { showModal } = modalState;
@@ -39,12 +35,6 @@ function HeaderImage() {
 
 	const handleOnLoad = () => {
 		if (image.current && image.current.complete) {
-			console.log(
-				"🚀 ~ file: HeaderImage.tsx ~ line 42 ~ handleOnLoad ~ image.current && image.current.complete",
-				image.current,
-				image.current.complete
-			);
-			console.log("image.current && image.current.complete");
 			setOnLoad(false);
 		} else if (!image?.current?.complete) {
 			console.log("else block");
@@ -53,7 +43,7 @@ function HeaderImage() {
 	};
 
 	return (
-		<>
+		<div className={className}>
 			{data.results[page] && (
 				<div className={styles.wrapper}>
 					<img
@@ -117,7 +107,7 @@ function HeaderImage() {
 					</>
 				</div>
 			)}
-		</>
+		</div>
 	);
 }
 

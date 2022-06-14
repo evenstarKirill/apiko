@@ -8,9 +8,14 @@ import { ReactComponent as FaceBook } from "./../../Assets/FaceBook.svg";
 
 import styles from "./HeaderContent.module.scss";
 
-function HeaderContent() {
+interface IProps {
+	id: string;
+	className?: string;
+}
+
+function HeaderContent({ id, className }: IProps) {
 	return (
-		<>
+		<div id={id} className={className}>
 			<div className={styles.wrapper}>
 				<Header />
 				<div className={styles.content}>
@@ -39,7 +44,7 @@ function HeaderContent() {
 					</div>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 }
 

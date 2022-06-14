@@ -16,7 +16,12 @@ import { IData, IResult } from "../../interfaces";
 
 import styles from "./Portfolio.module.scss";
 
-function Portfolio() {
+interface IProps {
+	id: string;
+	customStyles?: string;
+}
+
+function Portfolio({ id, customStyles }: IProps) {
 	const [weddingData, setWeddingData] = useRecoilState<IData>(weddingState);
 	const [natureData, setNatureData] = useRecoilState<IData>(natureState);
 	const [animalData, setAnimalData] = useRecoilState<IData>(animalsState);
@@ -123,18 +128,20 @@ function Portfolio() {
 	};
 
 	return (
-		<div className={styles.wrapper}>
-			<h1 className={styles.tittle}>Portfolio</h1>
-			<NavBar />
-			<div className={styles.container}>
-				<ImagesList />
-			</div>
-			<div
-				onClick={() => {
-					setPage(page + 1);
-					setLoadMore(true);
-				}}>
-				<Button propStyles={styles.button}>Show more</Button>
+		<div id={id} className={customStyles}>
+			<div className={styles.wrapper}>
+				<h1 className={styles.tittle}>Portfolio</h1>
+				<NavBar />
+				<div className={styles.container}>
+					<ImagesList />
+				</div>
+				<div
+					onClick={() => {
+						setPage(page + 1);
+						setLoadMore(true);
+					}}>
+					<Button propStyles={styles.button}>Show more</Button>
+				</div>
 			</div>
 		</div>
 	);

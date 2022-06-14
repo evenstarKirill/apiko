@@ -29,34 +29,41 @@ const items: IItem[] = [
 	},
 ];
 
-function FeedbackForm() {
+interface IProps {
+	id: string;
+	className?: string;
+}
+
+function FeedbackForm({ id, className }: IProps) {
 	return (
-		<div className={styles.wrapper_with_modal}>
-			<div className={styles.wrapper}>
-				<div className={styles.please_contact_us}>
-					<h1 className={styles.title}>Please contact us</h1>
-					<p className={styles.text}>
-						We appreciate every client and can make your dreams come
-						true! Do not hesitate to contact us.
-					</p>
-					<div className={styles.info_block}>
-						{items.map((item) => (
-							<div className={styles.item}>
-								<img
-									className={styles.icon}
-									alt='text'
-									src={item.icon as string}
-								/>
-								<div>{item.text}</div>
-							</div>
-						))}
+		<div id={id} className={className}>
+			<div className={styles.wrapper_with_modal}>
+				<div className={styles.wrapper}>
+					<div className={styles.please_contact_us}>
+						<h1 className={styles.title}>Please contact us</h1>
+						<p className={styles.text}>
+							We appreciate every client and can make your dreams
+							come true! Do not hesitate to contact us.
+						</p>
+						<div className={styles.info_block}>
+							{items.map((item) => (
+								<div className={styles.item}>
+									<img
+										className={styles.icon}
+										alt='text'
+										src={item.icon as string}
+									/>
+									<div>{item.text}</div>
+								</div>
+							))}
+						</div>
+						<div className={styles.green_line} />
 					</div>
-					<div className={styles.green_line} />
+					<img className={styles.image} src={image} alt='img'></img>
 				</div>
-				<img className={styles.image} src={image} alt='img'></img>
-			</div>
-			<div className={styles.modal}>
-				<Modal />
+				<div className={styles.modal}>
+					<Modal />
+				</div>
 			</div>
 		</div>
 	);

@@ -17,13 +17,8 @@ function App() {
 	return (
 		<RecoilRoot>
 			<div className={styles.app}>
-				<div id='Home' className={styles.header_content}>
-					<HeaderContent />
-				</div>
-
-				<div className={styles.header_image}>
-					<HeaderImage />
-				</div>
+				<HeaderContent id='Home' className={styles.header_content} />
+				<HeaderImage customStyles={styles.header_image} />
 				<img
 					className={styles.image}
 					alt='img'
@@ -38,21 +33,14 @@ function App() {
 					src={require("./Assets/WhatWeOffer.png")}
 				/>
 				<div />
-				<div id='Portfolio' className={styles.portfolio}>
-					<Portfolio />
-				</div>
-				<div id='Testimonials' className={styles.testimonials}>
-					<Testimonials />
-				</div>
-				<div id='Contact us' className={styles.feedbackform}>
-					<FeedbackForm />
-				</div>
-				<div className={styles.subscribe}>
-					<Subscribe />
-				</div>
-				<div className={styles.footer}>
-					<Footer />
-				</div>
+				<Portfolio id='Portfolio' customStyles={styles.portfolio} />
+				<Testimonials
+					id='Testimonials'
+					className={styles.testimonials}
+				/>
+				<FeedbackForm id='Contact us' className={styles.feedbackform} />
+				<Subscribe className={styles.subscribe} />
+				<Footer />
 			</div>
 		</RecoilRoot>
 	);
