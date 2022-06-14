@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import AboutUsContent from "./components/AboutUsContent/AboutUsContent";
 import HeaderContent from "./components/HeaderContent/HeaderContent";
 import WhatWeOffer from "./components/WhatWeOffer/WhatWeOffer";
@@ -14,42 +14,37 @@ import Subscribe from "./components/Subscribe/Subscribe";
 import Footer from "./components/Footer/Footer";
 
 function App() {
-	const myRef = useRef<null | HTMLDivElement>(null);
-	const executeScroll = () => myRef.current?.scrollIntoView();
-
 	return (
 		<RecoilRoot>
 			<div className={styles.app}>
-				<div className={styles.header_content}>
-					<HeaderContent scrollTo={executeScroll} />
+				<div id='Home' className={styles.header_content}>
+					<HeaderContent />
 				</div>
 
 				<div className={styles.header_image}>
 					<HeaderImage />
 				</div>
 				<img
-					style={{ height: "800px" }}
 					className={styles.image}
 					alt='img'
 					src={require("./Assets/AboutUs.png")}
 				/>
 				<AboutUsContent />
-				<div />
-				<WhatWeOffer scrollTo={executeScroll} />
+				<div id='About' />
+				<WhatWeOffer />
 				<img
-					style={{ height: "1000px" }}
 					className={styles.image}
 					alt='img'
 					src={require("./Assets/WhatWeOffer.png")}
 				/>
 				<div />
-				<div className={styles.portfolio}>
+				<div id='Portfolio' className={styles.portfolio}>
 					<Portfolio />
 				</div>
-				<div className={styles.testimonials}>
+				<div id='Testimonials' className={styles.testimonials}>
 					<Testimonials />
 				</div>
-				<div ref={myRef} className={styles.feedbackform}>
+				<div id='Contact us' className={styles.feedbackform}>
 					<FeedbackForm />
 				</div>
 				<div className={styles.subscribe}>

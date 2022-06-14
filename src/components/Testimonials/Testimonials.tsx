@@ -15,16 +15,12 @@ function Testimonials() {
 		<div className={styles.wrapper}>
 			<p className={styles.title}>Testimonials</p>
 			<div className={styles.list}>
-				{data
-					? slicedArray.map((data: IResult) => (
-							<Item
-								key={data.id}
-								img={data.urls.small.toString()}
-							/>
-					  ))
-					: null}
+				{data &&
+					slicedArray.map((data: IResult) => (
+						<Item key={data.id} img={data.urls.small.toString()} />
+					))}
 			</div>
-			{data.results ? (
+			{data.results && (
 				<Carousel
 					customStyles={styles.carousel}
 					customArrowLeftStyles={styles.arrow}
@@ -36,7 +32,7 @@ function Testimonials() {
 					withFullScreen={false}
 					page={page}
 				/>
-			) : null}
+			)}
 		</div>
 	);
 }

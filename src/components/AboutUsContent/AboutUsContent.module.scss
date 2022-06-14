@@ -15,7 +15,10 @@
 	}
 
 	@include respond-to(mobile) {
-		display: none;
+		position: relative;
+		top: -100px;
+		left: 0px;
+		margin: 0;
 	}
 
 	.wedding {

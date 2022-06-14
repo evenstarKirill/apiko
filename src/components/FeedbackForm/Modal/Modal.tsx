@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
+import EmailValidator from "../../../helpers/emailValidator";
 import Button from "../../Button/Button";
 
 import styles from "./Modal.module.scss";
@@ -42,10 +43,8 @@ function Modal() {
 	) => {
 		if (e.currentTarget.name === "email") {
 			setEmail(e.currentTarget.value);
-			const re =
-				/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-z\-0-9]+\.)+[a-z]{2,}))$/i;
 
-			if (!re.test(String(e.currentTarget.value).toLocaleLowerCase())) {
+			if (!EmailValidator(e)) {
 				setEmailError("email is not valid");
 			} else {
 				setEmailError("");

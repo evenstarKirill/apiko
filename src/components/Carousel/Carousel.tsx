@@ -30,8 +30,6 @@ function Carousel({
 	customArrowLeftStyles,
 	customArrowRightStyles,
 }: IProps) {
-	const [data] = useRecoilState<IData>(weddingState);
-
 	return (
 		<>
 			<div className={customStyles || styles.carousel}>

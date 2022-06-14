@@ -21,7 +21,9 @@ function Portfolio() {
 	const [natureData, setNatureData] = useRecoilState<IData>(natureState);
 	const [animalData, setAnimalData] = useRecoilState<IData>(animalsState);
 
-	const [topicString, setTopicString] = useRecoilState<string>(topic);
+	const [currentState, setCurrentState] = useState<IData>(weddingData);
+
+	const [topicString] = useRecoilState<string>(topic);
 
 	const [loadMore, setLoadMore] = useRecoilState<boolean>(isLoadMore);
 
@@ -29,12 +31,12 @@ function Portfolio() {
 
 	useEffect(() => {
 		if (topicString === "WEDDING") {
-			if (loadMore === false && weddingData.results.length > 1) {
+			if (!loadMore && weddingData.results.length > 1) {
 				return console.log("no reload");
 			} else {
 				request({ page: page, limit: 9, topic: topicString }).then(
 					(loadedData: IData) => {
-						if (loadMore === true) {
+						if (loadMore) {
 							setWeddingData((prevState) => ({
 								...prevState,
 								results: [
@@ -43,7 +45,7 @@ function Portfolio() {
 								],
 							}));
 						} else if (
-							loadMore === false &&
+							!loadMore &&
 							weddingData.results.length < 1
 						) {
 							setWeddingData(loadedData);
@@ -53,12 +55,12 @@ function Portfolio() {
 			}
 		}
 		if (topicString === "NATURE") {
-			if (loadMore === false && natureData.results.length > 1) {
+			if (!loadMore && natureData.results.length > 1) {
 				return console.log("no reload");
 			} else {
 				request({ page: page, limit: 9, topic: topicString }).then(
 					(loadedData: IData) => {
-						if (loadMore === true) {
+						if (loadMore) {
 							setNatureData((prevState) => ({
 								...prevState,
 								results: [
@@ -66,10 +68,7 @@ function Portfolio() {
 									...loadedData.results,
 								],
 							}));
-						} else if (
-							loadMore === false &&
-							natureData.results.length < 1
-						) {
+						} else if (!loadMore && natureData.results.length < 1) {
 							setNatureData(loadedData);
 						}
 					}
@@ -77,12 +76,12 @@ function Portfolio() {
 			}
 		}
 		if (topicString === "ANIMAL") {
-			if (loadMore === false && animalData.results.length > 1) {
+			if (!loadMore && animalData.results.length > 1) {
 				return console.log("no reload");
 			} else {
 				request({ page: page, limit: 9, topic: topicString }).then(
 					(loadedData: IData) => {
-						if (loadMore === true) {
+						if (loadMore) {
 							setAnimalData((prevState) => ({
 								...prevState,
 								results: [
@@ -90,10 +89,7 @@ function Portfolio() {
 									...loadedData.results,
 								],
 							}));
-						} else if (
-							loadMore === false &&
-							animalData.results.length < 1
-						) {
+						} else if (!loadMore && animalData.results.length < 1) {
 							setAnimalData(loadedData);
 						}
 					}
@@ -102,54 +98,27 @@ function Portfolio() {
 		}
 	}, [page, isLoadMore, topicString]);
 
-	let category: JSX.Element;
-
 	const ImagesList = () => {
 		if (topicString === "WEDDING") {
-			category = (
-				<>
-					{weddingData.results.map((data: IResult) => (
-						<img
-							loading='lazy'
-							className={styles.item}
-							key={data.id}
-							src={data.urls.small.toString()}
-							alt='img'
-						/>
-					))}
-				</>
-			);
+			setCurrentState(weddingData);
+		} else if (topicString === "NATURE") {
+			setCurrentState(natureData);
+		} else if (topicString === "ANIMAL") {
+			setCurrentState(animalData);
 		}
-		if (topicString === "NATURE") {
-			category = (
-				<>
-					{natureData.results.map((data: IResult) => (
-						<img
-							loading='lazy'
-							className={styles.item}
-							key={data.id}
-							src={data.urls.small.toString()}
-							alt='img'
-						/>
-					))}
-				</>
-			);
-		}
-		if (topicString === "ANIMAL") {
-			category = (
-				<>
-					{animalData.results.map((data: IResult) => (
-						<img
-							loading='lazy'
-							className={styles.item}
-							key={data.id}
-							src={data.urls.small.toString()}
-							alt='img'
-						/>
-					))}
-				</>
-			);
-		}
+		const category: JSX.Element = (
+			<>
+				{currentState?.results.map((data: IResult) => (
+					<img
+						loading='lazy'
+						className={styles.item}
+						key={data.id}
+						src={data.urls.small.toString()}
+						alt='img'
+					/>
+				))}
+			</>
+		);
 		return category;
 	};
 
@@ -160,7 +129,11 @@ function Portfolio() {
 			<div className={styles.container}>
 				<ImagesList />
 			</div>
-			<div onClick={() => (setPage(page + 1), setLoadMore(true))}>
+			<div
+				onClick={() => {
+					setPage(page + 1);
+					setLoadMore(true);
+				}}>
 				<Button propStyles={styles.button}>Show more</Button>
 			</div>
 		</div>

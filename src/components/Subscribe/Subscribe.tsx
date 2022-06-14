@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import EmailValidator from "../../helpers/emailValidator";
 import Button from "../Button/Button";
 
 import styles from "./Subscribe.module.scss";
@@ -19,10 +20,8 @@ function Subscribe() {
 
 	const onInputHandler = (e: React.FormEvent<HTMLInputElement>) => {
 		setEmail(e.currentTarget.value);
-		const re =
-			/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-z\-0-9]+\.)+[a-z]{2,}))$/i;
 
-		if (!re.test(String(e.currentTarget.value).toLocaleLowerCase())) {
+		if (!EmailValidator) {
 			setEmailError("email is not valid");
 		} else {
 			setEmailError("");

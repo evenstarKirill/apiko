@@ -15,11 +15,6 @@ const Portal = ({ show, onClose, children }: IProps) => {
 		setIsBrowser(true);
 	}, []);
 
-	const handleCloseClick = (e: React.MouseEvent<HTMLElement>) => {
-		e.preventDefault();
-		onClose();
-	};
-
 	const modalContent = show ? (
 		<div className={styles.overlay}>
 			<div className={styles.body}>{children}</div>

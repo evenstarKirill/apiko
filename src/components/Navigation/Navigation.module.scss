@@ -17,29 +17,19 @@
 		gap: 34px;
 	}
 
-	.item_ellipse {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+	.item {
+		white-space: nowrap;
+		cursor: pointer;
+	}
 
-		.item {
-			white-space: nowrap;
-			cursor: pointer;
-		}
+	.item:last-child {
+		margin: 0;
+	}
 
-		.item:last-child {
-			margin: 0;
-		}
-
-		.item:hover {
-			transform: scale(1.1);
-			opacity: 0.25;
-			transition: transform 0.3s;
-		}
-
-		.ellipse {
-			display: none;
-		}
+	.item:hover {
+		transform: scale(1.1);
+		opacity: 0.25;
+		transition: transform 0.3s;
 	}
 }
 

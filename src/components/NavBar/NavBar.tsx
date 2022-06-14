@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import { useRecoilState } from "recoil";
 import { isLoadMore, topic } from "../../recoil/atoms";
@@ -8,7 +7,7 @@ import styles from "./NavBar.module.scss";
 function NavBar() {
 	const [topicString, setTopicString] = useRecoilState<string>(topic);
 
-	const [loadMore, setLoadMore] = useRecoilState<boolean>(isLoadMore);
+	const [, setLoadMore] = useRecoilState<boolean>(isLoadMore);
 
 	const handleCategory = (category: string) => {
 		setLoadMore(false);

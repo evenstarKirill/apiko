@@ -8,11 +8,7 @@ import { ReactComponent as FaceBook } from "./../../Assets/FaceBook.svg";
 
 import styles from "./HeaderContent.module.scss";
 
-interface IProps {
-	scrollTo: () => void;
-}
-
-function HeaderContent({ scrollTo }: IProps) {
+function HeaderContent() {
 	return (
 		<>
 			<div className={styles.wrapper}>
@@ -27,8 +23,15 @@ function HeaderContent({ scrollTo }: IProps) {
 						make your dreams come true!
 					</p>
 					<div className={styles.button_icons}>
-						<div onClick={scrollTo}>
-							<Button>Contact us</Button>
+						<div>
+							<Button
+								onClick={() =>
+									document
+										?.getElementById("Contact us")
+										?.scrollIntoView()
+								}>
+								Contact us
+							</Button>
 						</div>
 						<YouTube className={styles.icon} />
 						<Inst className={styles.icon} />

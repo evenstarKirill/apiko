@@ -7,8 +7,10 @@ import { ReactComponent as FaceBook } from "./../../Assets/FaceBook.svg";
 import { ReactComponent as ApikoLogo } from "./../../Assets/ApikoLogoWhite.svg";
 
 import styles from "./Footer.module.scss";
+import dayjs from "dayjs";
 
 function Footer() {
+	const year = dayjs().year().toString();
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.logo_nav}>
@@ -16,7 +18,7 @@ function Footer() {
 				<Navigation isWhite={true} />
 			</div>
 			<div className={styles.bottom}>
-				<p>2019 © Apiko. All rights reserved.</p>
+				<p>{year} © Apiko. All rights reserved.</p>
 				<div className={styles.socials}>
 					<YouTube className={styles.icon} />
 					<Inst className={styles.icon} />

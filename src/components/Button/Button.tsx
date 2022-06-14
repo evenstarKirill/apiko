@@ -6,11 +6,15 @@ interface IProps {
 	children: string;
 	propStyles?: string;
 	isDisabled?: boolean;
+	onClick?: () => void;
 }
 
-function Button({ children, propStyles, isDisabled }: IProps) {
+function Button({ children, propStyles, isDisabled, onClick }: IProps) {
 	return (
-		<button disabled={isDisabled} className={propStyles || styles.wrapper}>
+		<button
+			onClick={onClick}
+			disabled={isDisabled}
+			className={propStyles || styles.wrapper}>
 			{children}
 		</button>
 	);
