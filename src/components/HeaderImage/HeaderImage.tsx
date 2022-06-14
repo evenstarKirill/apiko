@@ -53,9 +53,7 @@ function HeaderImage(className: any) {
 						alt='img'></img>
 					<div className={styles.carousel}>
 						<Carousel
-							next={() =>
-								setPage((prev) => (prev >= 6 ? prev : prev + 1))
-							}
+							next={() => setPage((prev) => (prev >= 6 ? prev : prev + 1))}
 							prev={() => page > 1 && setPage(page - 1)}
 							withFullScreen={true}
 							page={page}
@@ -64,9 +62,7 @@ function HeaderImage(className: any) {
 					</div>
 					<>
 						{modalState.showModal && (
-							<Portal
-								onClose={handleToggleModal}
-								show={modalState.showModal}>
+							<Portal onClose={handleToggleModal} show={modalState.showModal}>
 								{onLoad ? (
 									<Audio
 										height='100'
@@ -76,27 +72,17 @@ function HeaderImage(className: any) {
 									/>
 								) : (
 									<img
-										ref={
-											image as
-												| LegacyRef<HTMLImageElement>
-												| undefined
-										}
+										ref={image as LegacyRef<HTMLImageElement> | undefined}
 										className={styles.item_fullscreen}
 										key={data.results[page].id}
-										src={data.results[
-											page
-										].urls.full?.toString()}
+										src={data.results[page].urls.full?.toString()}
 										alt='img'
 										onLoad={handleOnLoad}
 									/>
 								)}
 
 								<Carousel
-									next={() =>
-										setPage((prev) =>
-											prev >= 6 ? prev : prev + 1
-										)
-									}
+									next={() => setPage((prev) => (prev >= 6 ? prev : prev + 1))}
 									prev={() => page > 1 && setPage(page - 1)}
 									withFullScreen={true}
 									page={page}

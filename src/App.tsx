@@ -34,10 +34,7 @@ function App() {
 				/>
 				<div />
 				<Portfolio id='Portfolio' customStyles={styles.portfolio} />
-				<Testimonials
-					id='Testimonials'
-					className={styles.testimonials}
-				/>
+				<Testimonials id='Testimonials' className={styles.testimonials} />
 				<FeedbackForm id='Contact us' className={styles.feedbackform} />
 				<Subscribe className={styles.subscribe} />
 				<Footer />

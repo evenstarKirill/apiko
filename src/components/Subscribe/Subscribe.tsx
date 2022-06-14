@@ -54,9 +54,7 @@ function Subscribe({ id, className }: IProps) {
 								placeholder='Your Email'
 							/>
 
-							<Button
-								isDisabled={!formValid}
-								propStyles={styles.button}>
+							<Button isDisabled={!formValid} propStyles={styles.button}>
 								Subscribe
 							</Button>
 						</div>
@@ -64,8 +62,8 @@ function Subscribe({ id, className }: IProps) {
 							<p className={styles.error}>{emailError}</p>
 						)}
 						<p>
-							We value your privacy. None of the details supplied
-							will be shared with external parties
+							We value your privacy. None of the details supplied will be shared
+							with external parties
 						</p>
 					</form>
 				</div>
