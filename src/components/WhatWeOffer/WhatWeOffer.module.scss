@@ -1,46 +1,46 @@
-@import "./../../styles//global.module.scss";
+@import './../../styles//global.module.scss';
 
 .wrapper {
-	display: flex;
-	flex-direction: column;
-	padding: 30px 40px 30px 40px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px 30px 40px;
 
-	@include respond-to(mobile) {
-		align-items: center;
-	}
+  @include respond-to(mobile) {
+    align-items: center;
+  }
 
-	.title {
-		margin: 0;
-		margin-top: 20px;
-		width: 100%;
-		font-weight: 200;
-		height: 55px;
-		font-size: 39.9592px;
-		line-height: 54px;
-		text-align: center;
-		text-transform: uppercase;
+  .title {
+    margin: 0;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 200;
+    height: 55px;
+    font-size: 39.9592px;
+    line-height: 54px;
+    text-align: center;
+    text-transform: uppercase;
 
-		@include respond-to(mobile) {
-			margin: 0;
-		}
-	}
+    @include respond-to(mobile) {
+      margin: 0;
+    }
+  }
 
-	.items_list {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 20px;
+  .items_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 
-		@include respond-to(mobile) {
-			gap: 50px;
-		}
-	}
+    @include respond-to(mobile) {
+      gap: 50px;
+    }
+  }
 
-	.contact_us_button {
-		z-index: 20;
-		margin: 0px 0 0 95%;
+  .contact_us_button {
+    z-index: 20;
+    margin: 0px 0 0 95%;
 
-		@include respond-to(mobile) {
-			margin: 24px 0 0 0;
-		}
-	}
+    @include respond-to(mobile) {
+      margin: 24px 0 0 0;
+    }
+  }
 }

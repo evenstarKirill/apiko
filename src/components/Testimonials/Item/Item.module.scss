@@ -1,77 +1,77 @@
-@import "./../../../styles/global.module.scss";
+@import './../../../styles/global.module.scss';
 
 .wrapper {
-	width: 100%;
-	max-width: 430px;
-	background: #f7f8f3;
-	color: black;
-	align-items: center;
-	justify-content: center;
+  width: 100%;
+  max-width: 430px;
+  background: #f7f8f3;
+  color: black;
+  align-items: center;
+  justify-content: center;
 
-	@include respond-to(tablet) {
-		max-width: 360px;
-	}
+  @include respond-to(tablet) {
+    max-width: 360px;
+  }
 
-	.image_container {
-		width: 100%;
-		height: 172px;
-	}
+  .image_container {
+    width: 100%;
+    height: 172px;
+  }
 
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding: 30px;
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
 
-		.avatar_quotes {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
+    .avatar_quotes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-			.quote {
-				height: 20px;
-				width: 20px;
-			}
+      .quote {
+        height: 20px;
+        width: 20px;
+      }
 
-			.avatars {
-				display: flex;
-				flex-direction: row;
-				justify-content: center;
-				height: 70px;
-				width: 100%;
-			}
-		}
+      .avatars {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 70px;
+        width: 100%;
+      }
+    }
 
-		.name {
-			font-weight: 400;
-			font-size: 18px;
-			line-height: 21px;
-			letter-spacing: 0.00711463px;
+    .name {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 0.00711463px;
 
-			color: #333333;
-			margin-bottom: 6px;
-		}
+      color: #333333;
+      margin-bottom: 6px;
+    }
 
-		.date {
-			font-weight: 400;
-			font-size: 14px;
-			line-height: 17px;
+    .date {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
 
-			letter-spacing: 0.0055336px;
+      letter-spacing: 0.0055336px;
 
-			color: $grey;
-		}
+      color: $grey;
+    }
 
-		.body {
-			margin-top: 20px;
-			font-weight: 200;
-			font-size: 18px;
-			line-height: 29px;
-			color: $custom_black;
-		}
+    .body {
+      margin-top: 20px;
+      font-weight: 200;
+      font-size: 18px;
+      line-height: 29px;
+      color: $custom_black;
+    }
 
-		p {
-			margin: 0;
-		}
-	}
+    p {
+      margin: 0;
+    }
+  }
 }

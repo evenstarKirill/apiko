@@ -1,60 +1,60 @@
-@import "./styles/global.module.scss";
+@import './styles/global.module.scss';
 
 .app {
-	width: 100%;
-	height: 100vh;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	display: grid;
-	grid-template-columns: 50% 50%;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 50% 50%;
 
-	@include respond-to(mobile) {
-		grid-template-columns: none;
-	}
+  @include respond-to(mobile) {
+    grid-template-columns: none;
+  }
 
-	.image {
-		height: 900px;
-		width: 100%;
-	}
+  .image {
+    height: 900px;
+    width: 100%;
+  }
 
-	.portfolio {
-		grid-column: span 2;
+  .portfolio {
+    grid-column: span 2;
 
-		@include respond-to(mobile) {
-			grid-column: auto;
-		}
-	}
+    @include respond-to(mobile) {
+      grid-column: auto;
+    }
+  }
 
-	.testimonials {
-		@extend .portfolio;
-	}
+  .testimonials {
+    @extend .portfolio;
+  }
 
-	.feedbackform {
-		@extend .portfolio;
-		height: 1000px;
-	}
+  .feedbackform {
+    @extend .portfolio;
+    height: 1000px;
+  }
 
-	.subscribe {
-		@extend .portfolio;
+  .subscribe {
+    @extend .portfolio;
 
-		@include respond-to(mobile) {
-			margin-top: 1000px;
-		}
-	}
+    @include respond-to(mobile) {
+      margin-top: 1000px;
+    }
+  }
 
-	.footer {
-		@extend .portfolio;
-		height: 221px;
-	}
+  .footer {
+    @extend .portfolio;
+    height: 221px;
+  }
 
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
