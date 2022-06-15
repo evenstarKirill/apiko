@@ -40,7 +40,6 @@ const Carousel = ({
       <FullScreen onClick={onOpen} className={styles.full} />
     )}
   </div>
-
 );
 
 export default Carousel;
