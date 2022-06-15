@@ -26,7 +26,6 @@ const Carousel = ({
   customArrowLeftStyles,
   customArrowRightStyles
 }: IProps) => (
-
   <div className={customStyles || styles.carousel}>
     <ArrowLeft
       className={customArrowLeftStyles || styles.arrow}
@@ -37,9 +36,9 @@ const Carousel = ({
       className={customArrowRightStyles || styles.arrow_right}
       onClick={next}
     />
-    {withFullScreen ? (
+    {withFullScreen && (
       <FullScreen onClick={onOpen} className={styles.full} />
-    ) : null}
+    )}
   </div>
 
 );

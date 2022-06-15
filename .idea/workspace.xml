@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="917cec18-b707-4658-b123-c1a60244c8e7" name="Changes" comment="" />
+    <list default="true" id="917cec18-b707-4658-b123-c1a60244c8e7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/components/Carousel/Carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Carousel/Carousel.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,7 +53,7 @@
       <workItem from="1653897838675" duration="33000" />
       <workItem from="1655211416966" duration="271000" />
       <workItem from="1655211753060" duration="989000" />
-      <workItem from="1655278903565" duration="4006000" />
+      <workItem from="1655278903565" duration="4121000" />
     </task>
     <servers />
   </component>
