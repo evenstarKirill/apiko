@@ -1,4 +1,4 @@
-@import './../../../styles//global.module.scss';
+@import './../../../styles/global.module.scss';
 
 .wrapper {
   padding: 46px 66px 48px 56px;
@@ -67,9 +67,8 @@
 
       p {
         color: red;
-        margin: 0;
+        margin: 0 0 8px 0;
         padding: 0;
-        margin-bottom: 8px;
         display: flex;
         justify-content: flex-end;
       }

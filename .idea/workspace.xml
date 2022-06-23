@@ -3,7 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="917cec18-b707-4658-b123-c1a60244c8e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/request.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/request.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AboutUsContent/AboutUsContent.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutUsContent/AboutUsContent.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Carousel/Carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Carousel/Carousel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FeedbackForm/FeedbackForm.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FeedbackForm/FeedbackForm.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FeedbackForm/Modal/Modal.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FeedbackForm/Modal/Modal.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FeedbackForm/Modal/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FeedbackForm/Modal/Modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HeaderImage/HeaderImage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeaderImage/HeaderImage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Testimonials/Testimonials.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Testimonials/Testimonials.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +20,18 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/Carousel/Carousel.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/Subscribe/Subscribe.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/Testimonials/Item/Item.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/Testimonials/Testimonials.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/WhatWeOffer/Item/Item.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/WhatWeOffer/TravelWeddingPhotography/TravelWeddingPhotography.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/WhatWeOffer/WhatWeOffer.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/helpers/emailValidator.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/interfaces/index.ts" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -22,22 +42,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/apple/Documents/work/2022/apiko",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/apple/Documents/work/2022/apiko/node_modules/prettier",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/apple/Documents/work/2022/apiko&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/apple/Documents/work/2022/apiko/node_modules/prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/apple/Documents/work/2022/apiko/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -54,7 +74,9 @@
       <workItem from="1653897838675" duration="33000" />
       <workItem from="1655211416966" duration="271000" />
       <workItem from="1655211753060" duration="989000" />
-      <workItem from="1655278903565" duration="4631000" />
+      <workItem from="1655278903565" duration="5029000" />
+      <workItem from="1655312467460" duration="2583000" />
+      <workItem from="1655554034636" duration="3755000" />
     </task>
     <servers />
   </component>

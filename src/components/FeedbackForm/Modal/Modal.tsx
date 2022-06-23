@@ -88,7 +88,7 @@ function Modal() {
             name="name"
             placeholder="Your Name"
           />
-          {nameError && nameDirty && <p>{nameError}</p>}
+          {nameDirty && <p>{nameError}</p>}
         </div>
         <div className={styles.input_block}>
           <label>Email</label>
@@ -99,7 +99,7 @@ function Modal() {
             name="email"
             placeholder="Your Email"
           />
-          {emailError && emailDirty && <p>{emailError}</p>}
+          {emailDirty && <p>{emailError}</p>}
         </div>
         <div className={styles.input_block}>
           <label>Message</label>
@@ -111,9 +111,9 @@ function Modal() {
             }
             name="message"
             rows={6}
-            placeholder={'Your Message'}
+            placeholder='Your Message'
           />
-          {messageError && messageDirty && <p>{messageError}</p>}
+          {messageDirty && <p>{messageError}</p>}
         </div>
         <div className={styles.button}>
           <Button isDisabled={!formValid}>SUBMIT</Button>

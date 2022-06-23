@@ -31,7 +31,7 @@ const Carousel = ({
       className={customArrowLeftStyles || styles.arrow}
       onClick={prev}
     />
-    {page}/6
+    <p>{page}/6</p>
     <ArrowLeft
       className={customArrowRightStyles || styles.arrow_right}
       onClick={next}
