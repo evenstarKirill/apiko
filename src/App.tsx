@@ -1,18 +1,19 @@
-import React from "react";
-import AboutUsContent from "./components/AboutUsContent/AboutUsContent";
-import HeaderContent from "./components/HeaderContent/HeaderContent";
-import WhatWeOffer from "./components/WhatWeOffer/WhatWeOffer";
-import Portfolio from "./components/Portfolio/Portfolio";
-import { RecoilRoot } from "recoil";
-import HeaderImage from "./components/HeaderImage/HeaderImage";
-import Testimonials from "./components/Testimonials/Testimonials";
-import FeedbackForm from "./components/FeedbackForm/FeedbackForm";
-import Subscribe from "./components/Subscribe/Subscribe";
-import Footer from "./components/Footer/Footer";
+import React from 'react';
+import AboutUsContent from './components/AboutUsContent/AboutUsContent';
+import HeaderContent from './components/HeaderContent/HeaderContent';
+import WhatWeOffer from './components/WhatWeOffer/WhatWeOffer';
+import Portfolio from './components/Portfolio/Portfolio';
+import { RecoilRoot } from 'recoil';
+import HeaderImage from './components/HeaderImage/HeaderImage';
+import Testimonials from './components/Testimonials/Testimonials';
+import FeedbackForm from './components/FeedbackForm/FeedbackForm';
+import Subscribe from './components/Subscribe/Subscribe';
+import Footer from './components/Footer/Footer';
 
-import styles from "./App.module.scss";
+import styles from './App.module.scss';
 
 const App = () => (
+  //test wsl
   <RecoilRoot>
     <div className={styles.app}>
       <HeaderContent id="Home" className={styles.header_content} />
@@ -20,7 +21,7 @@ const App = () => (
       <img
         className={styles.image}
         alt="img"
-        src={require("./assets/AboutUs.png")}
+        src={require('./assets/AboutUs.png')}
       />
       <AboutUsContent />
       <div id="About" />
@@ -28,7 +29,7 @@ const App = () => (
       <img
         className={styles.image}
         alt="img"
-        src={require("./assets/WhatWeOffer.png")}
+        src={require('./assets/WhatWeOffer.png')}
       />
       <div />
       <Portfolio id="Portfolio" customStyles={styles.portfolio} />

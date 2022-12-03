@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from "react";
-import Button from "../Button/Button";
-import NavBar from "../NavBar/NavBar";
-import { request } from "../../api/request";
+import React, { useEffect, useState } from 'react';
+import Button from '../Button/Button';
+import NavBar from '../NavBar/NavBar';
+import { request } from '../../api/request';
 
-import { useRecoilState } from "recoil";
+import { useRecoilState } from 'recoil';
 import {
   weddingState,
   topic,
   natureState,
   animalsState,
-  isLoadMore
-} from "../../recoil/atoms";
+  isLoadMore,
+} from '../../recoil/atoms';
 
-import { IData, IResult } from "../../interfaces";
+import { IData, IResult } from '../../interfaces';
 
-import styles from "./Portfolio.module.scss";
+import styles from './Portfolio.module.scss';
 
 interface IProps {
   id: string;
@@ -35,9 +35,9 @@ function Portfolio({ id, customStyles }: IProps) {
   const [page, setPage] = useState(1);
 
   useEffect(() => {
-    if (topicString === "WEDDING") {
+    if (topicString === 'WEDDING') {
       if (!loadMore && weddingData.results.length > 1) {
-        return console.log("no reload");
+        return console.log('no reload');
       } else {
         request({ page: page, limit: 9, topic: topicString }).then(
           (loadedData: IData) => {
@@ -46,19 +46,19 @@ function Portfolio({ id, customStyles }: IProps) {
                 ...prevState,
                 results: [
                   ...(prevState?.results as IResult[]),
-                  ...loadedData.results
-                ]
+                  ...loadedData.results,
+                ],
               }));
             } else if (!loadMore && weddingData.results.length < 1) {
               setWeddingData(loadedData);
             }
-          }
+          },
         );
       }
     }
-    if (topicString === "NATURE") {
+    if (topicString === 'NATURE') {
       if (!loadMore && natureData.results.length > 1) {
-        return console.log("no reload");
+        return console.log('no reload');
       } else {
         request({ page: page, limit: 9, topic: topicString }).then(
           (loadedData: IData) => {
@@ -67,19 +67,19 @@ function Portfolio({ id, customStyles }: IProps) {
                 ...prevState,
                 results: [
                   ...(prevState?.results as IResult[]),
-                  ...loadedData.results
-                ]
+                  ...loadedData.results,
+                ],
               }));
             } else if (!loadMore && natureData.results.length < 1) {
               setNatureData(loadedData);
             }
-          }
+          },
         );
       }
     }
-    if (topicString === "ANIMAL") {
+    if (topicString === 'ANIMAL') {
       if (!loadMore && animalData.results.length > 1) {
-        return console.log("no reload");
+        return console.log('no reload');
       } else {
         request({ page: page, limit: 9, topic: topicString }).then(
           (loadedData: IData) => {
@@ -88,24 +88,24 @@ function Portfolio({ id, customStyles }: IProps) {
                 ...prevState,
                 results: [
                   ...(prevState?.results as IResult[]),
-                  ...loadedData.results
-                ]
+                  ...loadedData.results,
+                ],
               }));
             } else if (!loadMore && animalData.results.length < 1) {
               setAnimalData(loadedData);
             }
-          }
+          },
         );
       }
     }
   }, [page, isLoadMore, topicString]);
 
   const ImagesList = () => {
-    if (topicString === "WEDDING") {
+    if (topicString === 'WEDDING') {
       setCurrentState(weddingData);
-    } else if (topicString === "NATURE") {
+    } else if (topicString === 'NATURE') {
       setCurrentState(natureData);
-    } else if (topicString === "ANIMAL") {
+    } else if (topicString === 'ANIMAL') {
       setCurrentState(animalData);
     }
     const category: JSX.Element = (
